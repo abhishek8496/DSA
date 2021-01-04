@@ -13,7 +13,8 @@ Since an extra visited array is needed of size V.
  *
  */
 
-public class DepthFirstSearch {
+
+public class BreadthFirstSearch {
 	 public static void main(String args[])
 	    {
 	        Graph g = new Graph(4);
@@ -25,9 +26,9 @@ public class DepthFirstSearch {
 	        g.addEdge(2, 3);
 	        g.addEdge(3, 3);
 	 
-	        System.out.println("Following is Depth First Traversal");
+	        System.out.println("Following is Breadth First Traversal");
 	 
-	        g.DFS();
+	        g.BFS();
 	    }
 
 }
