@@ -2,6 +2,7 @@ package graph;
 
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.Stack;
 
 public class Graph {
 
@@ -99,6 +100,48 @@ public class Graph {
 			}
 			
 		}
+		
+		
+		
+	}
+
+	public void iterativeDFS() 
+	{
+		//make a visited array and it will automatically initialize to 1
+		boolean[] visited = new boolean[V];
+		//check for all nodes from 0 to n-1 so that we can also traverse the not connected components
+		for(int i=0; i<V; i++)
+		{
+			if(!visited[i])
+			{
+				iterativeDFSUtil(i, visited);
+			}
+		}
+	}
+
+	private void iterativeDFSUtil(int i, boolean[] visited) 
+	{
+		Stack<Integer> stack = new Stack<Integer>();
+		visited[i]=true;
+		stack.push(i);
+		while(stack.size()>0)
+		{
+			Integer node=stack.pop();
+			System.out.println(node);
+			Iterator<Integer> iterator = adj[node].listIterator();
+			while(iterator.hasNext())
+			{
+				Integer neighbour=iterator.next();
+				if(!visited[neighbour])
+				{
+					visited[neighbour]=true;
+					stack.push(neighbour);
+					
+				}
+			}
+			
+		}
+		
 		
 		
 		
