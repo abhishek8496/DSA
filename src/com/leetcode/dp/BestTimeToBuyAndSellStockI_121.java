@@ -1,5 +1,10 @@
 package leetcode.dp;
 
+/**
+ * You can buy and sell the stock only once
+ * @author abhishek sharma
+ *
+ */
 public class BestTimeToBuyAndSellStockI_121 {
 	 public static int maxProfit(int[] prices) {
 	        if(prices==null || prices.length<2)return 0;
