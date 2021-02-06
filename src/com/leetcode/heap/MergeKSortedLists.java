@@ -1,6 +1,7 @@
-package leetcode.linkedlist;
+package leetcode.heap;
 
 import java.util.PriorityQueue;
+
 
 public class MergeKSortedLists {
 	 public ListNode mergeKLists(ListNode[] lists) {
@@ -13,7 +14,8 @@ public class MergeKSortedLists {
 	            }
 	            
 	        }
-	        ListNode result=null,resultTracker=null;
+	        leetcode.heap.ListNode result=null;
+			ListNode resultTracker=null;
 	        while(!queue.isEmpty())
 	        {
 	            Element temp=queue.poll();
